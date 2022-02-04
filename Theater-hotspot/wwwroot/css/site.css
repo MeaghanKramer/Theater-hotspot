@@ -1,11 +1,28 @@
 ﻿
 
-header {
+.headerimage {
     background-image: url('/img/header-bg.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headertext {
+    color: white;
+    font-size: 390%;
+    font-family: 'Trebuchet MS',sans-serif;
+}
+
+.bodytext {
+    background-color:orangered;
+}
+
+.footertext{
+    background-color:aquamarine;
 }
 
 body {
