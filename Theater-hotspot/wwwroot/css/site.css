@@ -1,6 +1,10 @@
-﻿
+﻿body {
+    margin: 0;
+    background-color:orangered;
+}
 
-.headerimage {
+
+.headerbody {
     background-image: url('/img/header-bg.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,14 +21,24 @@
     font-family: 'Trebuchet MS',sans-serif;
 }
 
-.bodytext {
-    background-color:orangered;
+.middlebody {
+    margin-top:-4vh;
+    color:blue;
 }
 
-.footertext{
-    background-color:aquamarine;
+    .middlebody h1 {
+        color: darkblue;
+        font-family: 'Trebuchet MS',sans-serif;
+    }
+
+    .middlebody p {
+        color: white;
+        font-family: 'Trebuchet MS',sans-serif;
+    }
+
+footer {
+    background-color: orangered;
+    color: darkblue;
+    font-family: 'Trebuchet MS',sans-serif;
 }
 
-body {
-    margin: 0;
-}
