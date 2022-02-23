@@ -8,19 +8,31 @@
     <header>
 
         <div class="headerbody">
+           
             <div class="logo">
+            </div>
 
+            <div class="navigatie">
+                <a href=#homepage>Homepage</a>&nbsp
+                <a href=#alle>Alle voorstellingen</a>&nbsp
+                <a href=#aankomende>Aankomende voorstellingen</a>&nbsp
+                <a href=#contact>Contact</a>&nbsp
+                <a href=#zoeken>Zoeken</a>&nbsp
             </div>
 
             <div class="headertext">
                 @ViewData["Title"]
             </div>
 
+
+
+
+
         </div>
     </header>
 
     <div class="middlebody">
-        <br><h1>Koptekst</h1>
+        <br><h1>    @RenderBody()</h1>
         <p>Paragraaf</p>
     </div>
 
@@ -28,6 +40,6 @@
 
     <footer>Footer</footer>
 
-    @RenderBody()
+
 </body>
 </html>

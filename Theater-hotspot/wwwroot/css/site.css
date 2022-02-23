@@ -1,6 +1,7 @@
 ﻿body {
-    margin: 0;
-    background-color:orangered;
+    background-color: #ae0000;
+    margin: 0%;
+    height: 100vh;
 }
 
 
@@ -19,7 +20,7 @@
     width: 100px;
     height: 100px;
     background-size: cover;
-    outline-width: 0px;
+    outline-width: 0%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -32,6 +33,15 @@
     font-family: 'Trebuchet MS',sans-serif;
     display: flex;
     justify-content: center;
+    margin-top: 6%;
+}
+
+.navigatie {
+    justify-content: right;
+    display: flex;
+    font-family: 'Trebuchet MS',sans-serif;
+    font-size: 200%;
+    margin-top:-10vh;
 }
 
 .middlebody {
@@ -50,7 +60,6 @@
     }
 
 footer {
-    background-color: orangered;
     color: darkblue;
     font-family: 'Trebuchet MS',sans-serif;
 }
