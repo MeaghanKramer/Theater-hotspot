@@ -42,6 +42,15 @@
     font-family: 'Trebuchet MS',sans-serif;
     font-size: 200%;
     margin-top:-10vh;
+    margin-right: 7%;
+}
+
+.zoeken {
+    justify-content: right;
+    display: flex;
+    font-family: 'Trebuchet MS',sans-serif;
+    font-size: 200%;
+    margin-top: -3vh;
 }
 
 .middlebody {

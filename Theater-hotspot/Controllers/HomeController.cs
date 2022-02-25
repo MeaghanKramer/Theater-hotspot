@@ -28,6 +28,30 @@ namespace Theater_hotspot.Controllers
             return View();
         }
 
+        [Route("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [Route("informatie")]
+        public IActionResult Informatie ()
+        {
+            return View();
+        }
+
+        [Route("verwacht")]
+        public IActionResult Verwacht()
+        {
+            return View();
+        }
+
+        [Route("voorstellingen")]
+        public IActionResult Voorstellingen()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
