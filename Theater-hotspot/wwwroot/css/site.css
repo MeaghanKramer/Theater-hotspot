@@ -50,12 +50,14 @@
     display: flex;
     font-family: 'Trebuchet MS',sans-serif;
     font-size: 200%;
-    margin-top: -3vh;
+    margin-top: -5vh; 
 }
 
 .middlebody {
     margin-top:-4vh;
     color:blue;
+    margin-left:1vw;
+    margin-bottom:40vh;
 }
 
     .middlebody h1 {
@@ -68,8 +70,9 @@
         font-family: 'Trebuchet MS',sans-serif;
     }
 
-footer {
-    color: darkblue;
+.footer {
+    color: white;
     font-family: 'Trebuchet MS',sans-serif;
+    margin-left:1vw;
 }
 
