@@ -54,11 +54,11 @@
 }
 
 .middlebody {
-    margin-top:-4vh;
-    color:blue;
-    margin-left:1vw;
+    margin-top: -4vh;
+    color: darkblue;
+    margin-left: 1vw;
     margin-right: 1vw;
-  
+    font-family: 'Trebuchet MS',sans-serif;
 }
 
 .topics {
@@ -72,6 +72,8 @@
     color:white;
     font-family: 'Trebuchet MS', sans-serif;
 }
+
+
 .footer {
     color: darkblue;
     font-family: 'Trebuchet MS',sans-serif;
