@@ -34,6 +34,13 @@ namespace Theater_hotspot.Controllers
             return View();
         }
 
+        [HttpPost]
+        [Route("contact")]
+        public IActionResult Contact(string naam, string stad)
+        {
+            return View();
+        }
+
         [Route("informatie")]
         public IActionResult Informatie ()
         {

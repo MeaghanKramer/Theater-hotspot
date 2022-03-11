@@ -3,21 +3,26 @@
 }
 <h1 class = 'topics'> Vul uw gegevens in!</h1>
 
-<p1 class= 'subtopic'> Als u hier de gevraagde gegevens invult zullen wij so spoedig mogelijk contact met u opnemen!</p1><br />
+<p1 class= 'subtopic'> Als u hier de gevraagde gegevens invult zullen wij so spoedig mogelijk contact met u opnemen!</p1><br /><br />
 
-<form >
-  <p1 class = 'subtopic'> Wat is uw geslacht?</p1> <br />
-
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label><br>
-  <input type="radio" id="man" name="gender" value="man">
-  <label for="man">Man</label><br>
-  <input type="radio" id="different" name="gender" value="different">
-  <label for="different">Different</label><br />
-
+<form method="post">
   <p1 class = 'subtopic'> Wat is uw voor én achternaam?</p1> <br />
+  <textarea id="naam" name="naam" required placeholder="Uw voor en achternaam..." style="height:100px"></textarea> <br /><br />
+
+  <p1 class = 'subtopic'> Wat is uw emailadres?</p1> <br />
+  <input type="email" id="e-mail" name="email" required placeholder="jouwnaam@domein.nl"><br /><br />
+
+  <p1 class = 'subtopic'> Wat is uw stad?</p1> <br />
+   <select id="stad" name="stad">
+      <option value="Amsterdam">Amsterdam</option>
+      <option value="Den haag">Den Haag</option>
+      <option value="anders">anders</option>
+    </select> <br /><br />
 
   <p1 class = 'subtopic'> Wat is uw probleem?</p1> <br />
+    <textarea id="probleem" name="probleem" required placeholder="Uw probleem..." style="height:100px"></textarea> <br /><br />
+
+    <input type="submit" value="Submit">
 </form>
 
 
