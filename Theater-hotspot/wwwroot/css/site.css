@@ -61,9 +61,7 @@
 .zoeken {
     justify-content: right;
     display: flex;
-    font-family: 'Trebuchet MS',sans-serif;
-    font-size: 200%;
-    margin-top: -5vh; 
+    color:white; 
 }
 
 .middlebody {
