@@ -45,7 +45,14 @@
     margin-right: 7%;
 }
 
-.link {
+.topnav {
+    overflow: hidden;
+    background-color: none;
+    width:9vw;
+    margin-right:-5%;
+}
+
+ .link {
     border: 5px solid #ffc34d;
     background-color: #ffc34d;
     color:black;
