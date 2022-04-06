@@ -1,7 +1,17 @@
-﻿@{
+﻿@using Theater_hotspot.Databases
+@model List<string>
+@model List<Product>
+@{
     ViewData["Title"] = "Theater de Hotspot";
 }
 
+<div class= "text-center">
+    <h1>Alle namen</h1>
+    @foreach(string naam in Model)
+    {
+        <p>@naam</p>
+    }
+</div>
 <h1 class = 'topics'>De nieuwste Corona maatregelen</h1>
 <p1 class= 'subtopic'> N.A.V. de laaste perconferentie (03/12/2021) blijft/wordt het volgende veranderd:
     <ul>
