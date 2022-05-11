@@ -36,9 +36,12 @@ namespace Theater_hotspot.Controllers
 
         [HttpPost]
         [Route("contact")]
-        public IActionResult Contact(string naam, string stad)
+        public IActionResult Contact(Person person)
         {
-            return View();
+            if (ModelState.IsValid)
+                return Redirect("/succes");
+
+            return View(person);
         }
 
         [Route("informatie")]

@@ -1,29 +1,32 @@
-﻿@{
+﻿@model Theater_hotspot.Models.Person
+@{
     ViewData["Title"] = "Contact";
 }
+<h1>@ViewData["Title"]</h1>
+
 <h1 class = 'topics'> Vul uw gegevens in!</h1>
 
 <p1 class= 'subtopic'> Als u hier de gevraagde gegevens invult zullen wij so spoedig mogelijk contact met u opnemen!</p1><br /><br />
 
 <form method="post">
-  <p1 class = 'subtopic'> Wat is uw voor én achternaam?</p1> <br />
-  <textarea id="naam" name="naam" required placeholder="Uw voor en achternaam..." style="height:16px; width: 242px; position:fixed"></textarea> <br /><br />
-
-  <p1 class = 'subtopic'> Wat is uw emailadres?</p1> <br />
-  <input type="email" id="e-mail" name="email" required placeholder="jouwnaam@domein.nl"><br /><br />
-
-  <p1 class = 'subtopic'> Wat is uw stad?</p1> <br />
-   <select id="stad" name="stad">
-      <option value="Amsterdam">Amsterdam</option>
-      <option value="Den haag">Den Haag</option>
-      <option value="anders">anders</option>
-    </select> <br /><br />
-
-  <p1 class = 'subtopic'> Wat is uw probleem?</p1> <br />
-    <textarea id="probleem" name="probleem" required placeholder="Uw probleem..." style="height:50px; width:242px "></textarea> <br /><br />
-
-    <input type="submit" value="Submit">
+    Voornaam:<input type="text" name="voornaam"/> 
+    @Html.ValidationMessageFor(m => m.Voornaam) <br/>
+    Achternaam: <input type="text" name="achternaam"/> 
+    @Html.ValidationMessageFor(m => m.Achternaam) <br/>
+    Email: <input type="text" name="email"/> 
+    @Html.ValidationMessageFor(m => m.Email) <br/>
+    Telefoon:<input type="text" name="telefoon"/> <br/> 
+    Adres:<input type="text" name="adres"/>  
+    @Html.ValidationMessageFor(m => m.Beschrijving) <br/>
+    Beschrijving:<input type="text" name="beschrijving"/> <br/> 
+    <input type="submit" value="verstuur"/>
 </form>
+
+@if (Model != null)
+{
+  <p>Hallo @Model.Voornaam die achternaam @Model.Achternaam heeft</p>
+}
+
 
 
 
