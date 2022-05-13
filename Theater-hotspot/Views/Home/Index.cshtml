@@ -1,5 +1,5 @@
 ﻿@using Theater_hotspot.Databases
-@model List<string>
+
 @model List<Product>
 @{
     ViewData["Title"] = "Theater de Hotspot";
@@ -7,9 +7,9 @@
 
 <div class= "text-center">
     <h1>Alle namen</h1>
-    @foreach(string naam in Model)
+    @foreach(Product p in Model)
     {
-        <p>@naam</p>
+        <p>@p.Naam</p>
     }
 </div>
 <h1 class = 'topics'>De nieuwste Corona maatregelen</h1>
