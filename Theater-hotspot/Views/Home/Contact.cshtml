@@ -9,22 +9,28 @@
 <p1 class= 'subtopic'> Als u hier de gevraagde gegevens invult zullen wij so spoedig mogelijk contact met u opnemen!</p1><br /><br />
 
 <form method="post">
-    Voornaam:<input type="text" name="voornaam"/> 
+    Voornaam:<br />
+    <input type="text" name="voornaam"/> 
     @Html.ValidationMessageFor(m => m.Voornaam) <br/>
-    Achternaam: <input type="text" name="achternaam"/> 
+    Achternaam: <br />
+    <input type="text" name="achternaam"/> 
     @Html.ValidationMessageFor(m => m.Achternaam) <br/>
-    Email: <input type="text" name="email"/> 
+    Email:<br />
+    <input type="text" name="email"/> 
     @Html.ValidationMessageFor(m => m.Email) <br/>
-    Telefoon:<input type="text" name="telefoon"/> <br/> 
-    Adres:<input type="text" name="adres"/>  
+    Telefoon:<br />
+    <input type="text" name="telefoon"/> <br/> 
+    Adres:<br />
+    <input type="text" name="adres"/>  
     @Html.ValidationMessageFor(m => m.Beschrijving) <br/>
-    Beschrijving:<input type="text" name="beschrijving"/> <br/> 
+    Beschrijving:<br />
+    <input type="text" name="beschrijving"/> <br/> 
     <input type="submit" value="verstuur"/>
 </form>
 
 @if (Model != null)
 {
-  <p>Hallo @Model.Voornaam die achternaam @Model.Achternaam heeft</p>
+  <p>Hallo @Model.Voornaam @Model.Achternaam !</p>
 }
 
 

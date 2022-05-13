@@ -25,16 +25,9 @@ namespace Theater_hotspot.Controllers
         {
            
             var rows = DatabaseConnector.GetRows("select * from product");
+
             var products = GetAllProducts();
-
-            List<string> names = new List<string>();
-
-            foreach(var row in rows)
-            {
-                names.Add(row["naam"].ToString());
-            }
-               
-            return View(names);
+          
             return View(products);
         }  
 
