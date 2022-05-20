@@ -12,6 +12,7 @@ namespace Theater_hotspot.Databases
         public string? Naam { get; set; }
         public string? Prijs { get; set; }
         public int Beschikbaarheid { get; set; }
+        public string? Eenheid { get; set; }
     }
 }
 
