@@ -1,16 +1,12 @@
 ﻿@using Theater_hotspot.Databases
 
-@model List<Product>
 @{
     ViewData["Title"] = "Theater de Hotspot";
 }
 
 <div class= "text-center">
     <h1>Algemene informatie</h1>
-    @foreach(Product p in Model)
-    {
-        <p class="product">@p.Naam - @p.Prijs - @p.Eenheid</p>
-    }
+   
 </div>
 <h1 class = 'topics'>De nieuwste Corona maatregelen</h1>
 <p1 class= 'subtopic'> N.A.V. de laaste perconferentie (03/12/2021) blijft/wordt het volgende veranderd:

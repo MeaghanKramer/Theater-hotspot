@@ -24,7 +24,7 @@ namespace Theater_hotspot.Controllers
         public IActionResult Index()
         {
            
-            var products = GetAllProducts();
+            var products = GetAllVoorstellingen();
           
             return View(products);
         }  
@@ -72,7 +72,9 @@ namespace Theater_hotspot.Controllers
         [Route("voorstellingen")]
         public IActionResult Voorstellingen()
         {
-            return View();
+            var products = GetAllVoorstellingen();
+
+            return View(products);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -80,22 +82,21 @@ namespace Theater_hotspot.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public List<Product> GetAllProducts()
+        public List<Voorstelling> GetAllVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var rows = DatabaseConnector.GetRows("select * from voorstelling");
 
             // lijst maken om alle producten in te stoppen
-            List<Product> products = new List<Product>();
+            List<Voorstelling> products = new List<Voorstelling>();
 
             foreach (var row in rows)
             {
                 // Voor elke rij maken we nu een product
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Id = Convert.ToInt32(row["id"]);
+                Voorstelling p = new Voorstelling();
+                p.Id= Convert.ToInt32(row["id"]);
+                p.Titel = row["Titel"].ToString();
+                p.Beschrijving= row["Beschrijving"].ToString();   
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
@@ -104,22 +105,21 @@ namespace Theater_hotspot.Controllers
             return products;
         }
 
-        public Product GetProduct(int id)
+        public Voorstelling GetProduct(int id)
         {
             // alle producten ophalen uit de database
             var rows = DatabaseConnector.GetRows($"select * from product where id = {id}");
 
             // lijst maken om alle producten in te stoppen
-            List<Product> products = new List<Product>();
+            List<Voorstelling> products = new List<Voorstelling>();
 
             foreach (var row in rows)
             {
                 // Voor elke rij maken we nu een product
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                Voorstelling p = new Voorstelling();
                 p.Id = Convert.ToInt32(row["id"]);
+                p.Titel = row["titel"].ToString();
+                p.Beschrijving = row["beschrijving"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);

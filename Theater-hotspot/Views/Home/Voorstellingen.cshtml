@@ -1,8 +1,19 @@
-﻿@{
+﻿@using Theater_hotspot.Databases
+@{
     ViewData["Title"] = "Voorstellingen";
 }
 <h1 class = 'topics'>@ViewData["Title"]</h1>
 
-<p1 class= 'subtopic'> N.A.V. de laaste perconferentie (03/12/2021) blijft/wordt het volgende veranderd:</p1><br/><br/>
+<p1 class= 'subtopic'> Hier staan alle voorstellingen die in dit theater spelen:</p1><br/><br/>
+
+ 
+
+<div class='alle voorstellingen'>
+     @foreach(Voorstelling p in Model)
+    {
+        <div class='voorstelling'>@p.Titel</div>
+    }    
+</div>
+
 
 
