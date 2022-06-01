@@ -11,7 +11,10 @@
 <div class='alle voorstellingen'>
      @foreach(Voorstelling p in Model)
     {
-        <div class='voorstelling'>@p.Titel</div>
+        <div class='voorstelling'> 
+            <div class='titels'>@p.Titel </div>  <br> 
+            <div class='beschrijvingen'>@p.Beschrijving </div>
+        </div> @p.Plaatje
     }    
 </div>
 

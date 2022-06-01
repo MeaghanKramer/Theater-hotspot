@@ -102,11 +102,19 @@
 }
 
 .voorstelling {
-    width: 50%;
-    border: 3px #ffc34d;
-    padding: 5%;
+    width: 60%;
+    border: 1px #ffc34d;
+    padding: 2%;
     margin: 1%;
     background: #ffc34d;
+}
+
+.titels {
+    font-size: 190%;
+}
+
+.beschrijvingen {
+    font-size: 125%;
 }
 
 .alle voorstellingen {

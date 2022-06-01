@@ -97,6 +97,7 @@ namespace Theater_hotspot.Controllers
                 p.Id= Convert.ToInt32(row["id"]);
                 p.Titel = row["Titel"].ToString();
                 p.Beschrijving= row["Beschrijving"].ToString();   
+                p.Plaatje = row["Plaatje"].ToString() ;
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
