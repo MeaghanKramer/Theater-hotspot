@@ -49,14 +49,7 @@ namespace Theater_hotspot.Controllers
 
             return View(person);
         }
-
-        [Route("product/{id}")]
-        public IActionResult ProductDetails (int id)
-        {
-            var product = GetProduct(id);
-            return View();
-        }
-
+       
         [Route("informatie")]
         public IActionResult Informatie ()
         {
@@ -76,6 +69,15 @@ namespace Theater_hotspot.Controllers
 
             return View(products);
         }
+
+        [Route("voorstellingen/{id}")]
+        public IActionResult VoorstelingDetails(int id)
+        {
+            var voorstelling = GetVoorstelling(id);
+
+            return View(voorstelling);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -106,10 +108,10 @@ namespace Theater_hotspot.Controllers
             return products;
         }
 
-        public Voorstelling GetProduct(int id)
+        public Voorstelling GetVoorstelling(int id)
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows($"select * from product where id = {id}");
+            var rows = DatabaseConnector.GetRows($"select * from voorstelling where id = {id}");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> products = new List<Voorstelling>();
@@ -119,8 +121,9 @@ namespace Theater_hotspot.Controllers
                 // Voor elke rij maken we nu een product
                 Voorstelling p = new Voorstelling();
                 p.Id = Convert.ToInt32(row["id"]);
-                p.Titel = row["titel"].ToString();
-                p.Beschrijving = row["beschrijving"].ToString();
+                p.Titel = row["Titel"].ToString();
+                p.Beschrijving = row["Beschrijving"].ToString();
+                p.Plaatje = row["Plaatje"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
