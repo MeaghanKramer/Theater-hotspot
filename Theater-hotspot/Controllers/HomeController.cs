@@ -100,6 +100,9 @@ namespace Theater_hotspot.Controllers
                 p.Titel = row["Titel"].ToString();
                 p.Beschrijving= row["Beschrijving"].ToString();   
                 p.Plaatje = row["Plaatje"].ToString() ;
+                p.Informatie = row["Informatie"].ToString();
+                p.Volgendedatum = row["Volgendedatum"].ToString();
+                p.Einddatum = row["Einddatum"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
@@ -124,6 +127,9 @@ namespace Theater_hotspot.Controllers
                 p.Titel = row["Titel"].ToString();
                 p.Beschrijving = row["Beschrijving"].ToString();
                 p.Plaatje = row["Plaatje"].ToString();
+                p.Informatie = row["Informatie"].ToString();
+                p.Volgendedatum = row["Volgendedatum"].ToString();
+                p.Einddatum = row["Einddatum"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
