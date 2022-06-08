@@ -12,10 +12,14 @@
      @foreach(Voorstelling p in Model)
     {
         <div class='voorstelling'> 
-            <a href="/voorstellingen/@p.Id">
-            <div class='titels'>@p.Titel </div>  <br> 
-            <div class='beschrijvingen'>@p.Beschrijving </div>
-        </div> @p.Plaatje
+            <div class="beschrijving">
+                <a href="/voorstellingen/@p.Id">
+                    <div class='titels'>@p.Titel </div>
+                    <div class='beschrijvingen'>@p.Beschrijving </div>
+                </a>
+            </div>
+            <div class="afbeelding" style="background-image:url(@p.Plaatje)"></div>
+        </div> 
     }    
 </div>
 

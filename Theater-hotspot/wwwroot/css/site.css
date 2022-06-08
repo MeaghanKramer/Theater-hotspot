@@ -103,15 +103,35 @@
 
 .voorstelling {
     width: 60%;
-    border: 1px #ffc34d;
-    padding: 2%;
+    border: 1px #ffc34d;    
     margin: 1%;
     background: #ffc34d;
+    display:flex;
 }
 
-.titels {
-    font-size: 190%;
-}
+    .voorstelling a {
+        text-decoration: none;
+        color: #2a2a2abb;
+    }
+
+    .voorstelling .beschrijving {
+        padding: 20px;
+        flex:1;
+    }
+
+    .voorstelling .afbeelding {
+        height: 200px;
+        flex: 1;
+        background-size: cover;
+    }
+
+    .voorstelling img{
+        width: 100%;
+    }
+
+    .titels {
+        font-size: 190%;
+    }
 
 .beschrijvingen {
     font-size: 125%;
@@ -120,5 +140,6 @@
 .alle voorstellingen {
     display:flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
