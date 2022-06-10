@@ -11,7 +11,7 @@
 
     <p>@Model.Beschrijving</p>
         <div class="info">
-            <p>@Model.Informatie</p>
+            <p>@Html.Raw(Model.Informatie)</p>
         </div>
          <div class="afbeelding" style="background-image:url(@Model.Plaatje)"></div>
     <p>@Model.Volgendedatum</p>

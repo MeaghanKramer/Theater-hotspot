@@ -16,7 +16,7 @@
             <div class="beschrijving">
                 <a href="/voorstellingen/@p.Id">
                     <div class='titels'>@p.Titel </div>
-                    <div class='beschrijvingen'>@p.Beschrijving </div>
+                    <div class='beschrijvingen'>@Html.Raw(p.Beschrijving)</div>
                 </a>
             </div>
             <div class="afbeelding" style="background-image:url(@p.Plaatje)"></div>
