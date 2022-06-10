@@ -4,11 +4,18 @@
     ViewData["Title"] = "Voorstellingen";
 }
 
+<div class="voorstellinginfo">
+   <div class=titel>
+        <h1>@Model.Titel</h1>
+   </div> 
 
-<h1>@Model.Titel</h1>
-<p>@Model.Beschrijving</p>
-<p>@Model.Informatie</p>
-<p>@Model.Plaatje</p>
-<p>@Model.Volgendedatum</p>
-<p>@Model.Einddatum</p>
+    <p>@Model.Beschrijving</p>
+        <div class="info">
+            <p>@Model.Informatie</p>
+        </div>
+         <div class="afbeelding" style="background-image:url(@Model.Plaatje)"></div>
+    <p>@Model.Volgendedatum</p>
+    <p>@Model.Einddatum</p>
      
+</div>
+

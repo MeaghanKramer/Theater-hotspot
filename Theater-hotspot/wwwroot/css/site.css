@@ -138,6 +138,26 @@
         font-size:150%;
     }
 
+.voorstellinginfo {
+    font-family: 'Trebuchet MS',sans-serif;
+}
+
+    .voorstellinginfo .info {
+        color: #2a2a2abb;
+    }
+
+    .voorstellinginfo .titel {
+        color: #ffc34d;
+    }
+
+    .voorstellinginfo .afbeelding {
+        margin-right: 5%;
+        display: flex;
+        height: 200px;
+        flex: 1;
+        background-size: cover;
+    }
+
 .beschrijvingen {
     font-size: 125%;
 }
