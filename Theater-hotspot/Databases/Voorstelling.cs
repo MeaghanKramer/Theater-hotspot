@@ -10,6 +10,7 @@
         public string? Volgendedatum { get; set; }
         public string? Einddatum { get; set; }
 
+        public string? Release_date { get; set; }
 
 
     }

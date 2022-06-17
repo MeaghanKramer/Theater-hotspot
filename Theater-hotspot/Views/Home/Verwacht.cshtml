@@ -1,6 +1,26 @@
-﻿@{
+﻿@using Theater_hotspot.Databases
+@model List<Voorstelling>
+@{
     ViewData["Title"] = "Verwacht";
 }
+
+
 <h1 class = 'topics'>@ViewData["Title"]</h1>
 
-<p1 class= 'subtopic'> N.A.V. de laaste perconferentie (03/12/2021) blijft/wordt het volgende veranderd:</p1> <br/><br/>
+<p1 class= 'subtopic'> Dit zijn alle aankomende voorstellingen: op datum gesorteerd!</p1> <br/><br/>
+
+<div class='alle voorstellingen'>
+     @foreach(Voorstelling p in Model)
+    {
+        <div class='voorstelling'> 
+            <div class="beschrijving">
+                <a href="/voorstellingen/@p.Id">
+                    <div class='titels'>@p.Titel </div>
+                    <div class='beschrijvingen'>@Html.Raw(p.Beschrijving)</div>
+                    <div class="datum">@p.Release_date</div>
+                </a>
+            </div>
+            <div class="afbeelding" style="background-image:url(@p.Plaatje)"></div>
+        </div> 
+    }    
+</div>

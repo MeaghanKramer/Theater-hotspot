@@ -73,18 +73,18 @@
 
 .middlebody {
     margin-top: -4vh;
-    color: darkblue;
+    color: #260038;
     margin-left: 1vw;
     margin-right: 1vw;
     font-family: 'Trebuchet MS',sans-serif;
 }
 
 .topics {
-    color: darkblue;
+    color: #260038;
     font-family: 'Trebuchet MS',sans-serif;
     margin-block: 0.5% 0.7%;
     font-size: x-large;
-    }
+}
 
 .subtopic {
     color:white;
@@ -140,20 +140,33 @@
 
 .voorstellinginfo {
     font-family: 'Trebuchet MS',sans-serif;
+    width: 100%;
+    color: #260038;
 }
 
     .voorstellinginfo .info {
-        color: #2a2a2abb;
+        color: goldenrod;
+        width: 50%;
+        position:relative;
     }
 
+    .voorstellinginfo .sidepic {
+        width: 50%;
+        position:relative;
+    }
     .voorstellinginfo .titel {
         color: #ffc34d;
+    }
+
+    .voorstellingdisplay {
+        display:flex;
     }
 
     .voorstellinginfo .afbeelding {
         margin-right: 5%;
         display: flex;
-        height: 200px;
+        height: 550px;
+        width: 975px;
         flex: 1;
         background-size: cover;
     }

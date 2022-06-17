@@ -59,13 +59,15 @@ namespace Theater_hotspot.Controllers
         [Route("verwacht")]
         public IActionResult Verwacht()
         {
-            return View();
+            var voorstellingen = GetAllVoorstellingen();
+
+            return View(voorstellingen);
         }
 
         [Route("voorstellingen")]
         public IActionResult Voorstellingen()
         {
-            var products = GetAllVoorstellingen();
+            var products = GetVerwachtteVoorstellingen();
 
             return View(products);
         }
@@ -94,15 +96,41 @@ namespace Theater_hotspot.Controllers
 
             foreach (var row in rows)
             {
-                // Voor elke rij maken we nu een product
-                Voorstelling p = new Voorstelling();
-                p.Id= Convert.ToInt32(row["id"]);
-                p.Titel = row["Titel"].ToString();
-                p.Beschrijving= row["Beschrijving"].ToString();   
-                p.Plaatje = row["Plaatje"].ToString() ;
-                p.Informatie = row["Informatie"].ToString();
-                p.Volgendedatum = row["Volgendedatum"].ToString();
-                p.Einddatum = row["Einddatum"].ToString();
+                Voorstelling p = GetVoorstellingFromRow(row);
+
+                // en dat product voegen we toe aan de lijst met producten
+                products.Add(p);
+            }
+
+            return products;
+        }
+
+        private static Voorstelling GetVoorstellingFromRow(Dictionary<string, object> row)
+        {
+            // Voor elke rij maken we nu een product
+            Voorstelling p = new Voorstelling();
+            p.Id = Convert.ToInt32(row["id"]);
+            p.Titel = row["Titel"].ToString();
+            p.Beschrijving = row["Beschrijving"].ToString();
+            p.Plaatje = row["Plaatje"].ToString();
+            p.Informatie = row["Informatie"].ToString();
+            p.Volgendedatum = row["Volgendedatum"].ToString();
+            p.Einddatum = row["Einddatum"].ToString();
+            p.Release_date = row["release_date"].ToString();
+            return p;
+        }
+
+        public List<Voorstelling> GetVerwachtteVoorstellingen()
+        {
+            // alle producten ophalen uit de database
+            var rows = DatabaseConnector.GetRows("select * from voorstelling order by release_date Desc");
+
+            // lijst maken om alle producten in te stoppen
+            List<Voorstelling> products = new List<Voorstelling>();
+
+            foreach (var row in rows)
+            {
+                Voorstelling p = GetVoorstellingFromRow(row);
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
@@ -130,6 +158,7 @@ namespace Theater_hotspot.Controllers
                 p.Informatie = row["Informatie"].ToString();
                 p.Volgendedatum = row["Volgendedatum"].ToString();
                 p.Einddatum = row["Einddatum"].ToString();
+                p.Release_date = row["release_date"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);
