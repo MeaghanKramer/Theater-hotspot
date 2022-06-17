@@ -11,6 +11,7 @@
         public string? Einddatum { get; set; }
 
         public string? Release_date { get; set; }
+        public string? Tickets { get; set; }
 
 
     }

@@ -117,13 +117,14 @@ namespace Theater_hotspot.Controllers
             p.Volgendedatum = row["Volgendedatum"].ToString();
             p.Einddatum = row["Einddatum"].ToString();
             p.Release_date = row["release_date"].ToString();
+            p.Tickets = row["Tickets"].ToString();
             return p;
         }
 
         public List<Voorstelling> GetVerwachtteVoorstellingen()
         {
             // alle producten ophalen uit de database
-            var rows = DatabaseConnector.GetRows("select * from voorstelling order by release_date Desc");
+            var rows = DatabaseConnector.GetRows("select * from voorstelling order by release_date DESC");
 
             // lijst maken om alle producten in te stoppen
             List<Voorstelling> products = new List<Voorstelling>();
@@ -159,6 +160,7 @@ namespace Theater_hotspot.Controllers
                 p.Volgendedatum = row["Volgendedatum"].ToString();
                 p.Einddatum = row["Einddatum"].ToString();
                 p.Release_date = row["release_date"].ToString();
+                p.Tickets = row["Tickets"].ToString();
 
                 // en dat product voegen we toe aan de lijst met producten
                 products.Add(p);

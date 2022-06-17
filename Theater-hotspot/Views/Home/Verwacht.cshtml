@@ -16,8 +16,10 @@
             <div class="beschrijving">
                 <a href="/voorstellingen/@p.Id">
                     <div class='titels'>@p.Titel </div>
-                    <div class='beschrijvingen'>@Html.Raw(p.Beschrijving)</div>
-                    <div class="datum">@p.Release_date</div>
+                    <div class='beschrijvingen'>@Html.Raw(p.Beschrijving)</div> <br> 
+                    <div class="datum">De dag van de primaire:@p.Release_date <br /> 
+                        Eerstvolgende voorstelling:@p.Volgendedatum<br>
+                        Beschikbare tickets:@p.Tickets</div>
                 </a>
             </div>
             <div class="afbeelding" style="background-image:url(@p.Plaatje)"></div>

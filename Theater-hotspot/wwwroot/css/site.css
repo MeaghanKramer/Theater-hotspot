@@ -79,6 +79,9 @@
     font-family: 'Trebuchet MS',sans-serif;
 }
 
+.data {
+    color:goldenrod;
+}
 .topics {
     color: #260038;
     font-family: 'Trebuchet MS',sans-serif;
@@ -89,6 +92,12 @@
 .subtopic {
     color:white;
     font-family: 'Trebuchet MS', sans-serif;
+}
+
+.uitleg {
+    color:#260038;
+    font-family:'Trebuchet MS', sans-serif;
+    font-size:initial;
 }
 
 
@@ -142,6 +151,7 @@
     font-family: 'Trebuchet MS',sans-serif;
     width: 100%;
     color: #260038;
+    font-size:large;
 }
 
     .voorstellinginfo .info {
