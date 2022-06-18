@@ -161,7 +161,7 @@
     }
 
     .voorstellinginfo .sidepic {
-        width: 50%;
+        width: 30%;
         position:relative;
     }
     .voorstellinginfo .titel {
@@ -170,13 +170,14 @@
 
     .voorstellingdisplay {
         display:flex;
+        width: 100%;
     }
 
     .voorstellinginfo .afbeelding {
         margin-right: 5%;
         display: flex;
-        height: 550px;
-        width: 975px;
+        height: 100%;
+        width: 170%;
         flex: 1;
         background-size: cover;
     }
